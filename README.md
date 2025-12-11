@@ -199,7 +199,7 @@ npm run lint     # Lint code
 
 ### Backend (server/.env)
 - `PORT=3000`
-- `MONGO_URI=mongodb://localhost:27017/mock_interviewer`
+- `MONGO_URI=your_mongo_uri_here`
 - `JWT_SECRET=your_secret_key`
 - `GEMINI_API_KEY=your_gemini_api_key` ⚠️ **Required**
 - `UPLOADS_DIR=./uploads`
