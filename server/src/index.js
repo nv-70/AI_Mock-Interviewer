@@ -21,9 +21,17 @@ const PORT = process.env.PORT || 3000;
 // ================== ✅ CORS (FIXED) ==================
 app.use(
   cors({
-    origin: ["http://localhost:3001"],
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"],
+    origin: function (origin, callback) {
+      const allowedOrigins = [
+        "http://localhost:3001",
+        "https://aimockinterviewer-tau.vercel.app",
+      ];
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   }),
 );
