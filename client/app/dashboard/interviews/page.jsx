@@ -149,7 +149,7 @@ export default function InterviewHistoryPage() {
                     <div className="mt-4">
                       <div className="w-full bg-white rounded-full h-2">
                         <div
-                          className="h-2 rounded-full bg-primary-600 transition-all"
+                          className="h-2 rounded-full bg-primary-600 transition-all" 
                           style={{ width: `${session.completionPercentage}%` }}
                         />
                       </div>
